@@ -1,9 +1,8 @@
-import MainSection from "@/app/components/section/mainSection";
+import MainSection from "@/app/components/section/home/mainSection";
 
 export default function Home() {
   return (
-    <div>
-      <MainSection />
-    </div>
+    <MainSection />
   );
 }
+
