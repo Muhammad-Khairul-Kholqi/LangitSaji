@@ -6,7 +6,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                playfair: ['var(--font-playfair)', 'serif'],
+                playfair: ['var(--font-roboto)', 'serif'],
             },
         },
     },
