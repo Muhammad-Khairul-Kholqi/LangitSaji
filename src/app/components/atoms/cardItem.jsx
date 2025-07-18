@@ -17,11 +17,13 @@ export default function CardItem({ image, category, title, description, price })
     return (
         <div className="border border-gray-200 p-5 rounded-lg group">
             <div className="relative overflow-hidden rounded-md">
-                <Image
-                    className="rounded-md w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
-                    src={image}
-                    alt={title}
-                />
+                <Image 
+                    src={image} 
+                    alt={title} 
+                    width={500}
+                    height={300}
+                    className="w-full h-auto object-cover group-hover:scale-125 duration-300"
+                />
                 <div className={`absolute top-2 left-2 ${getCategoryColor(category)} text-white text-xs px-3 py-1 rounded-full capitalize`}>
                     {category}
                 </div>

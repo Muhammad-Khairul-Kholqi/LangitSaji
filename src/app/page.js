@@ -6,19 +6,30 @@ import AboutUsSection from "@/app/components/section/home/aboutUsSection";
 import Faq from "@/app/components/section/home/faqSection";
 import ExcessSection from "@/app/components/section/home/excessSection";
 import ContactSection from "@/app/components/section/home/contactSectin";
+import ScrollToTopButton from "@/app/components/atoms/scrollToTopButton";
 
 export default function Home() {
   return (
     <div>
-      <MainSection />
+      <div id="main">
+        <MainSection />
+      </div>
       <Sponsored />
-      <MenuSection />
-      <SpecialPromo />
-      <AboutUsSection />
+      <div id="menu">
+        <MenuSection />
+      </div>
+      <div id="special-promo">
+        <SpecialPromo />
+      </div>
+      <div id="about">
+        <AboutUsSection />
+      </div>
       <Faq />
       <ExcessSection />
-      <ContactSection />
+      <div id="contact">
+        <ContactSection />
+      </div>
+      <ScrollToTopButton />
     </div>
   );
 }
-

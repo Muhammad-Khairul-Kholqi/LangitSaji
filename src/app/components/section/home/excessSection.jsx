@@ -4,7 +4,7 @@ export default function ExcessSection() {
     return (
         <div className="flex justify-center p-5 mt-10">
             <div 
-                className="w-full max-w-[1200px] bg-cover bg-center p-5 rounded-xl" 
+                className="w-full max-w-[1200px] bg-cover bg-center p-5 rounded-2xl" 
                 style={{backgroundImage: `url(${BgExcessSection.src})`}}
             >
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center gap-5">

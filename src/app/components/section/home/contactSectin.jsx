@@ -5,12 +5,12 @@ import BackgroundImage from "@/app/assets/bg-special-promo.png";
 import { FaInstagram, FaXTwitter, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa6";
 import { ChevronDownIcon } from "lucide-react";
 
-const layananList = ["Desain", "Pengembangan", "Konsultasi", "Lainnya"];
+const layananList = ["Keluhan", "Saran", "Konsultasi", "Lainnya"];
 
 const contactInfo = [
     {
         title: "Alamat",
-        details: ["2624 Royal Ln. Mesa, New Jersey 45463"],
+        details: ["JL.Danau Tamblingan 119, Sanur - Bali 82113"],
     },
     {
         title: "Kontak",
@@ -99,7 +99,7 @@ export default function ContactSection() {
                         className="w-full h-[500px] lg:h-screen lg:max-w-[40%] p-10 rounded-xl bg-cover bg-center"
                         style={{ backgroundImage: `url(${BackgroundImage.src})` }}
                     >
-                        <div className="flex flex-col justify-between h-full text-white">
+                        <div className="flex flex-col space-y-5 justify-between h-full text-white">
                             {contactInfo.map((section, index) => (
                                 <div key={index}>
                                     <h3 className="font-semibold text-2xl">{section.title}</h3>
