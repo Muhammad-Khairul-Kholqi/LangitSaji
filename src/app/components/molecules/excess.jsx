@@ -25,8 +25,8 @@ export default function Excess() {
                         <Leaf className="text-white text-xl" />
                     </div>
                     <div className="text-start">
-                        <h3 className="text-lg font-bold">100% Sehat dan Halal</h3>
-                        <h4 className="text-sm">Menjaga kualitas</h4>
+                        <h3 className="text-lg font-bold">Menjaga kualitas</h3>
+                        <h4 className="text-sm">100% Sehat dan Halal</h4>
                     </div>
                 </div>
             </motion.div>

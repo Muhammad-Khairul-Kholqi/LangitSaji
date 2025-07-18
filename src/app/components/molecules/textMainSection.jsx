@@ -7,7 +7,7 @@ export default function TextMainSection() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-wider leading-15"
+                className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-wider leading-15"
             >
                 Hidangan Lokal<br />
                 yang Menghadirkan<br />

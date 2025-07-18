@@ -12,7 +12,7 @@ export default function ImageMainSection() {
             <Image
                 src={ImageMain}
                 alt="Hidangan khas Langit Saji"
-                className="w-[450px] h-auto mx-auto md:mx-0"
+                className="w-full h-auto mx-auto md:mx-0"
             />
         </motion.div>
     )
