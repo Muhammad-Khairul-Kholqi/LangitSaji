@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
+import { Suspense } from "react";
+import ScrollHandler from "@/app/components/atoms/scrollHandler";
 import MainSection from "@/app/components/section/home/mainSection";
 import Sponsored from "@/app/components/section/home/sponsored";
 import MenuSection from "@/app/components/section/home/menuSection";
@@ -29,6 +31,10 @@ export default function Home() {
 
   return (
     <div>
+      <Suspense fallback={null}>
+        <ScrollHandler />
+      </Suspense>
+
       <div id="main">
         <MainSection />
       </div>
@@ -51,4 +57,5 @@ export default function Home() {
       <ScrollToTopButton />
     </div>
   );
+
 }
