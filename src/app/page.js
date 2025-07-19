@@ -6,6 +6,7 @@ import AboutUsSection from "@/app/components/section/home/aboutUsSection";
 import Faq from "@/app/components/section/home/faqSection";
 import ExcessSection from "@/app/components/section/home/excessSection";
 import ContactSection from "@/app/components/section/home/contactSectin";
+import Footer from "@/app/components/global/footer";
 import ScrollToTopButton from "@/app/components/atoms/scrollToTopButton";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
       <div id="contact">
         <ContactSection />
       </div>
+      <Footer />
       <ScrollToTopButton />
     </div>
   );
