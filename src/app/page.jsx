@@ -1,9 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import { useSearchParams } from "next/navigation";
-
-import { Suspense } from "react";
-import ScrollHandler from "@/app/components/atoms/scrollHandler";
 import MainSection from "@/app/components/section/home/mainSection";
 import Sponsored from "@/app/components/section/home/sponsored";
 import MenuSection from "@/app/components/section/home/menuSection";
@@ -16,10 +12,10 @@ import Footer from "@/app/components/global/footer";
 import ScrollToTopButton from "@/app/components/atoms/scrollToTopButton";
 
 export default function Home() {
-  const searchParams = useSearchParams();
-
   useEffect(() => {
-    const sectionId = searchParams.get("scrollTo");
+    const urlParams = new URLSearchParams(window.location.search);
+    const sectionId = urlParams.get("scrollTo");
+
     if (sectionId) {
       const el = document.getElementById(sectionId);
       if (el) {
@@ -27,14 +23,10 @@ export default function Home() {
         window.scrollTo({ top: offset, behavior: "smooth" });
       }
     }
-  }, [searchParams]);
+  }, []);
 
   return (
     <div>
-      <Suspense fallback={null}>
-        <ScrollHandler />
-      </Suspense>
-
       <div id="main">
         <MainSection />
       </div>
@@ -57,5 +49,4 @@ export default function Home() {
       <ScrollToTopButton />
     </div>
   );
-
 }
