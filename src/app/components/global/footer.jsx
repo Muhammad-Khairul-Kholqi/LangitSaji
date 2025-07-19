@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from "react";
 import { FaInstagram, FaXTwitter, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa6";
 
 const socialLinks = [
@@ -9,6 +12,12 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+    const [year, setYear] = useState(null);
+
+    useEffect(() => {
+        setYear(new Date().getFullYear());
+    }, []);
+
     return (
         <footer className="flex justify-center px-5 pt-10 pb-5 mt-10 bg-black">
             <div className="w-full max-w-[1200px]">
@@ -30,10 +39,12 @@ export default function Footer() {
                         ))}
                     </div>
                     <hr className="border border-gray-800 my-5 w-full" />
-                    <h5 className="text-white">
-                        Copyright © {new Date().getFullYear()} by Langit Saji
-                    </h5>
-                </div>  
+                    {year && (
+                        <h5 className="text-white">
+                            Copyright © {year} by Langit Saji
+                        </h5>
+                    )}
+                </div>
             </div>
         </footer>
     )

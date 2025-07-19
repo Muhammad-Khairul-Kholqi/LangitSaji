@@ -1,36 +1,31 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export const UseActiveSection = () => {
-    const [activeSection, setActiveSection] = useState('main');
+    const [activeSection, setActiveSection] = useState("main");
 
     useEffect(() => {
+        const sections = ["main", "menu", "about", "contact"];
+        const navHeight = 80;
+
         const handleScroll = () => {
-            const sections = ['main', 'menu', 'about', 'contact'];
-            const navHeight = 80;
+            const scrollPosition = window.scrollY + navHeight + 100;
+            let current = "main";
 
-            let currentSection = 'main';
-
-            for (const sectionId of sections) {
-                const element = document.getElementById(sectionId);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    const elementTop = rect.top + window.pageYOffset;
-                    const scrollPosition = window.pageYOffset + navHeight + 100; 
-
-                    if (scrollPosition >= elementTop) {
-                        currentSection = sectionId;
-                    }
+            for (const id of sections) {
+                const el = document.getElementById(id);
+                if (el && scrollPosition >= el.offsetTop) {
+                    current = id;
                 }
             }
 
-            setActiveSection(currentSection);
+            setActiveSection((prev) => (prev !== current ? current : prev));
         };
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
 
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return activeSection;

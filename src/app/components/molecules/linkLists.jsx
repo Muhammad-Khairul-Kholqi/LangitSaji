@@ -1,3 +1,4 @@
+"use client";
 import LinkItem from "@/app/components/atoms/linkItem";
 
 export default function LinkLists({ isMobile = false }) {

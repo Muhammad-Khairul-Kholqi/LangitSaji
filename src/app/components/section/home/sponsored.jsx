@@ -13,7 +13,7 @@ export default function Sponsored() {
     const repeatedLogos = [...logos, ...logos, ...logos]
 
     return (
-        <div className="overflow-hidden py-5 bg-white">
+        <div className="overflow-hidden py-5 bg-white mt-5">
             <div className="w-full max-w-[1200px] mx-auto">
                 <div className="whitespace-nowrap animate-slide flex items-center w-max gap-10">
                     {repeatedLogos.map((logo, index) => (
